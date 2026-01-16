@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(120deg, #004346, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background 0.2s;
+}
+
+input[type="range"] {
+    width: 100%;
+    opacity: 0.85;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70vh;
+}
+

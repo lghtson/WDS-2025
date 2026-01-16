@@ -1,0 +1,68 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #00565a,
+        #ffffff
+    );
+    color: #cbf7bd;
+}
+
+.header {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+    text-wrap: balance;
+}
+
+.right {
+    text-align: right;
+    text-wrap: balance;
+    margin-left: 30%
+}
+
+.scene {
+    display: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.scene.on {
+    display: block;
+}
+
+.answer {
+    display: none;
+}
+
+.answer.show {
+    display: block;
+}
+
+.typewriter {
+    border-right: 2px solid black;
+    animation: typing 3.5s steps(40, end),  blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    50% { border-right-color: transparent; }
+}
+
+#nextButton {
+    display: block;
+    margin: 40px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s
+}
+
+#nextButton:hover {
+    background: black;
+}

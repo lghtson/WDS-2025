@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 300vh;
+    background: #0b0b0b;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background: #0b0b0b;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}
+
+.stage {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.cameraWrap {
+    position: relative;
+    width: min(420px, 70vw);
+    display: grid;
+    place-items: center;
+}
+
+.camera {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+.scratches {
+    position: absolute;
+    inset: 0;
+    background: url("scratches.png") center/cover no-repeat;
+    opacity: 0;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+.flash {
+    position: fixed;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    z-index: 4;
+    pointer-events: none;
+}

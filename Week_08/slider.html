@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fog Slider</title>
+        <link rel="stylesheet" href="style.css">    
+    </head>
+    <body>
+        <div id = "controls">
+            <input type = "range" min = "0" max = "100" value = "50" class = "slider">
+            <input type = "range" min = "0" max = "100" value = "50" class = "slider">
+            <input type = "range" min = "0" max = "100" value = "50" class = "slider">
+        </div>
+        
+        <script>
+            const sliders = document.querySelectorAll(".slider");
+            const states = [];
+            const userInterrupt = 5000;
+
+            for (let i = 0; i < sliders.length; i++) {
+                states.push({
+                    t: i * 2,
+                    speed: 0.006 + i * 0.003,
+                    pause: 0
+                });
+            }
+
+            for (let i = 0; i < sliders.length; i++) {
+                function interrupt() {
+                    states[i].pause = Date.now() + userInterrupt;
+                }
+
+                sliders[i].addEventListener("pointerdown", interrupt);
+                sliders[i].addEventListener("input", interrupt);
+            }
+
+            function update(){
+                const now = Date.now();
+                for (let i = 0; i < sliders.length; i++) {
+                    if (now > states[i].pause) {
+                        states[i].t += states[i].speed;
+                        sliders[i].value = 50 + Math.sin(states[i].t) * 50;
+                    }
+                }
+            
+                const s1 = Number(sliders[0].value);
+                const s2 = Number(sliders[1].value);
+                const s3 = Number(sliders[2].value);
+
+                const blur = (100 - s1) * .15;
+                document.body.style.filter = "blur(" + blur + "px)";  
+                
+                const mix = (s2 + s3) / 200;
+                const r = Math.round(255 * mix);
+                const g = Math.round(67 +(255 - 67) * mix);
+                const b = Math.round(70 +(255 - 70) * mix)
+                
+                document.body.style.background = "rgb(" + r + "," + g + "," + b + ")";
+            }
+
+            setInterval(update,30);
+        </script>
+    </body>
+</html>
+
+
+
+

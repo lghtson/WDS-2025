@@ -1,0 +1,27 @@
+body {
+    background-color: #365314;
+    color: #f7fee7
+}
+
+h1 {
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 5px;
+    display: inline;
+}
+
+h5 {
+    text-align: center;
+    color: #f7fee7;
+}
+
+p {
+    text-align: center;
+    color: #f7fee7;
+}
+
+.container {
+    display: flex;
+    background-color: brown;
+    align-items: center;
+}

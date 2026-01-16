@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>Gradient Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="label"></div>
+
+  <script>
+    function setGradientFromTime() {
+      const now = new Date();
+      const h = now.getHours();
+      const m = now.getMinutes();
+      const s = now.getSeconds();
+  
+      const t = (h * 3600 + m * 60 + s) / 86400;
+      const hue = Math.floor(t * 360);
+  
+      const daylight = 1 - Math.abs(t - 0.5) * 2;
+      const lightness = 20 + daylight * 45;
+  
+      const hue2 = (hue + 40) % 360;
+
+      //used AI to create the radial gradient of the background
+      const x = 20 + m;
+      const y = 30 + s / 2;
+
+      const glow = `hsl(${hue2} 70% ${Math.min(lightness + 18, 75)}%)`;
+      const base = `hsl(${hue} 70% ${lightness}%)`;
+
+      document.body.style.background = `radial-gradient(circle at ${x}% ${y}%, ${glow}, ${base})`;
+  
+      document.getElementById("label").textContent =
+        now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+  
+    setGradientFromTime();
+    setInterval(setGradientFromTime, 1000);
+  </script>  
+</body>
+</html>

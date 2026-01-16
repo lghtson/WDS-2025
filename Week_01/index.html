@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body {background-image: linear-gradient(to bottom, white, lightblue);}
-            .centre {text-align: center;}
-            .left {text-align: left; text-wrap: balance; }
-            .right {text-align: right; text-wrap: balance; margin-left: 30%;}
-        
-        </style>
+        <title>Intro</title>
+        <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
-        <h1 class = "centre">If You Don't Know:</h1>
-        <h2 class = "centre">Get to Know: A Convo w/ Myself</h2>
-        <br><br>
+        <section class ="header">
+            <h1>If You Don't Know:</h1>
+            <h2>Get to Know: A Convo w/ Myself</h2>
+        </section>
+        
+        <section class="scene on">
+            <h3 class = "left"><span class = "typewriter">So, who even are you?</span></h3>
+            <div class="answer">
+                <h3 class = "right">Chris:</h3>
+                <p class="right"><span class = "typewriter">I'm Chris, 20, and I'm a second year student at UAL.</span></p>
+            </div>
+        </section>
 
-        <h3 class = "left">So who even are you?</h3>
+        <section class="scene">
+            <h3 class = "left"><span class = "typewriter">We know that already man, who REALLY are you?</span></h3>
+            <div class="answer">
+                <h3 class = "right">Chris:</h3>
+                <p class="right"><span class = "typewriter">I ain't know we was going this deep already, damn ! Well I'm from North London (actually born in Leicester but whatever), and im still pretty new to this whole "Creative Computing" thing. See, i originally wanted to be a footballer, but now i just wanna mess around with computers and make stuff i guess.</span></p>
+            </div>
+        </section>
 
-        <h3 class = "right">Chris:</h3>
-        <p class="right">I'm Chris, 20, and I'm a second year student at UAL.</p>
+        <section class="scene">
+            <h3 class = "left"><span class = "typewriter">Fairs, im guessing you're a pretty big football fan then?</span></h3>
+            <div class="answer">
+                <h3 class = "right">Chris:</h3>
+                <p class="right"><span class = "typewriter">Yessir, bigggg Chelsea fan! Big sports fan in general; I also love gaming, music and photography. I just love cool stuff init, thats my main thing - If it's cool involve me.</span></p>
+            </div>
+        </section>
 
-        <h3 class = "left">We know that already man, who REALLY are you?</h3>
-
-        <h3 class = "right">Chris:</h3>
-        <p class="right">I ain't know we was going this deep already, damn ! Well I'm from North London (actually born in Leicester but whatever), and im still pretty new to this whole "Creative Computing" thing. See, i originally wanted to be a footballer, but now i just wanna mess around with computers and make stuff i guess.</p>
-
-        <h3 class = "left">Fairs, im guessing you're a pretty big football fan then?</h3>
-
-        <h3 class = "right">Chris:</h3>
-        <p class="right">Yessir, bigggg Chelsea fan! Big sports fan in general; I also love gaming, music and photography. I just love cool stuff init, thats my main thing - If it's cool involve me.</p>
-
-        <h3 class = "left">Cool, but seriously tho - what do you wanna achieve by being here?</h3>
-
-        <h3 class = "right">Chris:</h3>
-        <p class="right">Brother, you are asking the wrong person, i still dont even really know what i wanna do loooool. I do wanna make something that ends up in a museum tho i think that'll be cool, i just wanna have a lasting legacy in whatever i decide to do.</p>
+        <section class="scene">
+            <h3 class = "left"><span class = "typewriter">Cool, but seriously tho - what do you wanna achieve by being here?</span></h3>
+            <div class="answer">
+                <h3 class = "right">Chris:</h3>
+                <p class="right"><span class = "typewriter"> Brother, you are asking the wrong person, i still dont even really know what i wanna do loooool. I do wanna make something that ends up in a museum tho i think that'll be cool, i just wanna have a lasting legacy in whatever i decide to do.</span></p>
+            </div>
+        </section>
     
-        <h3 class = "left">Finally, what's one thing you have to tell the people at home?</h3>
-
-        <h3 class = "right">Chris:</h3>
-        <p class="right">Live yours or enjoy the show.</p>
-
-        </h3>
+        <section class="scene">
+            <h3 class = "left"><span class = "typewriter"> Finally, what's one thing you have to tell the people at home?</span></h3>
+            <div class="answer">
+                <h3 class = "right">Chris:</h3>
+                <p><span class = "typewriter">Live yours or enjoy the show.</span></p>
+            </div>
+        </section>
+        
+        <button id="nextButton">Next</button>
+        <script src="./main.js"></script> 
     </body>
 </html>
