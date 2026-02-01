@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class = "menu" onclick = "toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </section>
+
+        <nav class = "sidepanel" id = "sidepanel">
+            <a href = "/Users/chrisbola/Documents/Y2 CC/WDS-2025/Week_01/index.html">About</a>
+            <a href = "#work" class = "panel-link">Work</a>
+            <a href = "#contact" class = "panel-link">Contact</a>
+            <button id="settingsMenuItem" class="panel-link">Settings</button>
+        </nav>
+
+        <section class = "hero">
+                <h1 id = "heroLine">IS THIS ON?</h1>
+        </section>
+
+        <section class = "slideshow" id = "work">
+            <div class = "slides">
+                <a href="Week_02/Task/links/poem.html">
+                    <img src = "Delivered.png" style = "width: 100%" alt = "Delivered Poem">
+                </a>
+                <div class = "text">Delivered</div>
+            </div>
+            
+            <div class = "slides">
+                <a href="Week_09/LoPO.html">
+                    <img src = "DirtyCamera.png" style = "width: 100%" alt= "Dirty Camera">
+                </a>
+                <div class = "text">Dirty Camera</div>
+            </div>
+
+            <div class = "slides">
+                <a href="Week_08/slider.html">
+                    <img src = "FogSlider.png" style = "width: 100%" alt= "Fog Slider">
+                </a>
+                <div class = "text">Fog Slider</div>
+            </div>
+
+            <div class = "slides">
+                <a href="Week_06/clock.html">
+                    <img src = "GradientClock.png" style = "width: 100%" alt = "Gradient Clock">
+                </a>
+                <div class = "text">Gradient Clock</div>
+            </div>
+
+            <a class = "prev" onclick="nextSlides(-1)">&#10094;</a>
+            <a class = "next" onclick="nextSlides(1)">&#10095;</a>
+        </section>
+
+        <section class = "footer" id = "contact">
+            <h1>TOLD YOU SO.</h1>
+        </section>
+
+        <section class = "modal" id = "settingsModal" role = "dialog" aria-modal = "true" aria-hidden = "true" aria-labelledby="settingsTitle">
+            <div class="modal__backdrop" data-close="true"></div>
+
+            <div class = "modal__panel" role = "document" tabindex = "-1">
+                <div class = "modal__header">
+                    <h2 id = "settingsTitle">Accessibility Settings</h2>
+                    <button class = "modal__close" type = "button" data-close = "true" aria-label = "Close settings">&times;</button>
+                </div>
+                
+                <div class = "modal__content">
+                    <label class = "field">
+                        <span>Theme</span>
+                        <select id = "themeSelect">
+                            <option value = "cyan">Cyan</option>
+                            <option value = "crimson">Crimson</option>
+                            <option value = "darkgreen">Dark Green</option>
+                            <option value = "blackbean">Black Bean</option>
+                            <option value = "highcontrast">High Contrast</option>
+                        </select>
+                    </label>
+                    
+                    <label class="field">
+                        <span>Font</span>
+                        <select id="fontSelect">
+                            <option value = "staatliches">Staatliches</option>
+                            <option value = "system">System</option>
+                            <option value = "mono">Monospace</option>
+                        </select>
+                    </label>
+                    
+                    <label class="field">
+                        <span>Font size</span>
+                        <input id = "fontSize" type = "range" min = "14" max = "26" step = "1">
+                        <span id = "fontSizeValue" class = "value"></span>
+                    </label>
+                    
+                    <label class = "field">
+                        <span>Line height</span>
+                        <input id = "lineHeight" type = "range" min = "1.2" max = "2" step = "0.1">
+                        <span id = "lineHeightValue" class = "value"></span>
+                    </label>
+   
+                    <label class="field field--row">
+                        <span>Reduce motion</span>
+                        <input id="reduceMotion" type="checkbox">
+                    </label>
+   
+                    <div class="modal__actions">
+                        <button id="resetSettings" type="button">Reset</button>
+                        <button type="button" data-close="true">Done</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+        <script src="./main.js"></script>    
+    </body>
+</html>
